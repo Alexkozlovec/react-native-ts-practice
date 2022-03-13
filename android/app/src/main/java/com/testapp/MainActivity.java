@@ -2,6 +2,8 @@ package com.testapp;
 
 import com.facebook.react.ReactActivity;
 
+import android.os.Bundle;
+
 public class MainActivity extends ReactActivity {
 
   /**
@@ -11,5 +13,11 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "TestApp";
+  }
+
+  // https://reactnavigation.org/docs/getting-started/#installing-dependencies-into-a-bare-react-native-project
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 }
