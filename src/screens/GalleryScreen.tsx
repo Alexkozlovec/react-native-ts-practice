@@ -38,8 +38,13 @@ export const GalleryScreen: React.FC<
   }, [currentPage, dispatch]);
 
   const refresh = React.useCallback(() => {
-    dispatch(setCurrentPage(1));
-  }, [dispatch]);
+    if (currentPage !== 1) {
+      dispatch(setCurrentPage(1));
+      return;
+    }
+
+    dispatch(fetchImages());
+  }, [currentPage, dispatch]);
 
   const renderItem: ListRenderItem<IUnsplashImage> = ({ item }) => {
     return <GalleryCard onImageClick={handleImageClick} image={item} />;
