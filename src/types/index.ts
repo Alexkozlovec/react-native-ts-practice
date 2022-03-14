@@ -1,6 +1,9 @@
 // navigation
 export type RootStackParamList = {
   Gallery: undefined;
+  Image: {
+    imageId: string;
+  };
 };
 
 // unsplash data
