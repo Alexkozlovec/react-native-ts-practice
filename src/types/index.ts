@@ -4,7 +4,7 @@ export type RootStackParamList = {
 };
 
 // unsplash data
-interface IUnsplashImageUrls {
+export interface IUnsplashImageUrls {
   raw: string;
   full: string;
   regular: string;
@@ -12,14 +12,14 @@ interface IUnsplashImageUrls {
   thumb: string;
 }
 
-interface IUnsplashImageLinks {
+export interface IUnsplashImageLinks {
   self: string;
   html: string;
   download: string;
   download_location: string;
 }
 
-interface IUnsplashUserLinks {
+export interface IUnsplashUserLinks {
   self: string;
   html: string;
   photos: string;
@@ -27,13 +27,13 @@ interface IUnsplashUserLinks {
   portfolio: string;
 }
 
-interface IUnsplashProfileImage {
+export interface IUnsplashProfileImage {
   small: string;
   medium: string;
   large: string;
 }
 
-interface IUnsplashUser {
+export interface IUnsplashUser {
   id: string;
   username: string;
   name: string;
@@ -49,7 +49,7 @@ interface IUnsplashUser {
   links: IUnsplashUserLinks;
 }
 
-interface IUnsplashCollection {
+export interface IUnsplashCollection {
   id: number;
   title: string;
   published_at: string;
